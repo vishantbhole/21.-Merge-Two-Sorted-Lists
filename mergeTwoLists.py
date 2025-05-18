@@ -38,3 +38,11 @@ class Solution(object):
             tail.next = list2
 
         return dummy.next
+
+def create_linked_list(values):
+    dummy = ListNode()
+    current = dummy
+    for val in values:
+        current.next = ListNode(val)
+        current = current.next
+    return dummy.next
