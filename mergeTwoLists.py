@@ -38,3 +38,29 @@ class Solution(object):
             tail.next = list2
 
         return dummy.next
+
+
+
+def test_merge():
+    s = Solution()
+
+    # Test Case 1
+    l1 = create_linked_list([1, 2, 4])
+    l2 = create_linked_list([1, 3, 4])
+    merged = s.mergeTwoLists(l1, l2)
+    print("Merged List 1:", merged)  # Expected: 1->1->2->3->4->4
+
+    # Test Case 2
+    l1 = create_linked_list([])
+    l2 = create_linked_list([])
+    merged = s.mergeTwoLists(l1, l2)
+    print("Merged List 2:", merged)  # Expected: None
+
+    # Test Case 3
+    l1 = create_linked_list([])
+    l2 = create_linked_list([0])
+    merged = s.mergeTwoLists(l1, l2)
+    print("Merged List 3:", merged)  # Expected: 0
+
+if __name__ == "__main__":
+    test_merge()
